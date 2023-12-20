@@ -1,0 +1,170 @@
+{% extends 'base.html' %} 
+{% block title %}About Us - We are a leading recycling company dedicated to environmental sustainability. With expertise in collecting, sorting, and processing recyclable materials, we aim to minimize waste and maximize resource recovery. 
+Our state-of-the-art facilities and commitment to innovation enable us to create a greener future by promoting 
+recycling practices and reducing environmental impact. {% endblock %}
+{% load static %}
+{% block content%}
+
+
+  <!-- Page Header Start -->
+  <div class="container-fluid  py-0 mb-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container  py-4 my-4">
+      <h1  class=" mb-4 mt-4  fs-1 text-black fw-bold text-decoration-overline text-center"><span class="mb-4 fw-bold knoAwz">SARGASSO RECLAMATION STORY</span></h1>
+     
+    </div>
+  </div>
+<!-- Features Start -->
+<!-- Features Start -->
+<div class="container mt-4">
+       
+                <p class="mb-0  fw-5 text-justify">
+                    Sargasso Reclamation hails from Malindi in Kenya, a 1400 year old city from the Swahili-Zanzibari culture. 
+                    Today Malindi is a coastal Tourism destination of 200,000 people and the region of Malindi and our neighbouring towns have a role to 
+                    play in the fight against ocean waste. Malindi has the size and industrial capacity to boast a recycling sector, and our region has a 
+                    growing plastic footprint of its own, the estuary of a large river that flows from densely populated inland regions, and a natural coral
+                     reef ecosystem in the shallow seas off our coast. Our trade winds also mean that on some
+                     local beaches large amounts of plastic wash ashore from the Indian ocean garbage patch, with packaging from Malaysia, Mozambique or 
+                     Dubai.
+                    
+                </p>
+    
+</div>
+<!-- Features Start -->
+<div class="container-xxl py-4 ">
+        <div class="row mx-0">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                <h3  class="mb-2  knoAwz text-justify "><span class="mb-4">Our</span> History</h3>
+                <p class="mb-4 text-justify">
+                    {% if profile %}
+                    {{ profile.history }}
+                </p>
+                {% else %}
+                 <p>Update Profile If available.</p>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row mx-0">
+            <div class="col-lg-6 wow fadeInUp " data-wow-delay="0.2s">
+                    <h1  class="mb-2  knoAwz text-left">Our<span class="mb-4"> Vision</span></h1>
+                    <p class="mb-4  fw-5 text-justify "> 
+                        {% if profile %}
+                        {{ profile.vision }}
+                    </p>
+                    {% else %}
+                    <p>Update Profile If available.</p>
+                    {% endif %}
+               </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+              
+                    <h1  class="mb-2  knoAwz text-justify"> <span class="mb-4">Our</span> Mission</h1>
+                    <p class="mb-4  fw-5 text-justify">
+                    {% if profile %}
+                    {{ profile.mission }}
+
+                     </p>
+            
+                     {% else %}
+                  <p>Update Profile If available.</p>
+                  {% endif %}
+                </div>                    
+        </div>
+    </div>
+
+<!-- Features End -->
+                 <div class="container mt-4">
+                    <div class="container">
+                        <div class="row mx-0 wow fadeInUp" data-wow-delay="0.1s">
+                       
+                                <div class="mb-0  fw-5 justify-content-center">
+                    <iframe id="ytplayer"  type="text/html" width="100%" height="500" src="https://www.youtube.com/embed/DgbXNbW46LY?autoplay=1&origin=http://example.com"
+                  frameborder="0"></iframe>
+                                </div>
+                        </div>
+                       </div>
+                </div>
+
+<!-- Team Start 
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1  class="mb-2 fs-1 fw-bolder titl1 text-left text-decoration-overline ">Sargasso<span class="mb-4 fw-semi-bold"> Team</span></h1>
+            <h4 class="display-1 fs-2 fw-light mt-0 text-black ">Dedicated & Experienced Team Members</h4>
+        </div>
+        <div class="row g-2">
+           
+        
+            
+            {% for employee in employee %}
+            <div class="col-lg-3 col-md-3">
+                <div class="team-item rounded">
+                    <img class="img-rounded" src="{{employee.img.url}}"  alt="sargasso_Employee" height="308px" width="260px">
+                    <div class="team-text">
+                        <h4 class="mb-0 p-0 fw-semi-bold fs-5 pb-0">{{ employee.name}}</h4>
+                        <p class="text-info  p-0"><b>{{ employee.position}}</b></p>
+                        <div class="team-social d-flex">
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%endfor %}
+             
+              <div id="demo2" class="carousel slide mt-4" data-bs-ride="carousel">
+
+            
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo2" data-bs-slide-to="2"></button>
+                </div>
+
+               
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'img/team.jpg'%}" alt="plastics-pellets" class="d-block w-100">
+                  </div>
+                
+                </div>
+
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div> 
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+    <!-- ======= Contact Section ======= -->
+
+        <div class="container-fluid pt-4 mt-4" data-aos="fade-up">
+  
+          <div class="section-title pb-0">
+            <h3  class="mb-4 text-center"><span class="mb-4 knoAwz">OUR OFFICES</span></h3>
+          </div>
+  
+          <div class="row">
+       
+            <div class="col-lg-12">
+              <iframe
+
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1184.2806433013682!2d40.124532833077886!3d-3.2428966087992617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18158520b0331d3f%3A0xc03dd31190df23b1!2sSargasso%20Reclamation%20Head%20Office!5e0!3m2!1sen!2sza!4v1670306052474!5m2!1sen!2sza"
+                width="1950" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+<!-- End Contact Section -->
+
+    </div>
+
+	<script>
+  AOS.init();
+</script>
+
+{% endblock%}

@@ -1,0 +1,96 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content%}
+
+<!------ Include the above in your HEAD tag ---------->
+<link href="{% static 'css/plan.css'%}" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<section class="our-blog p-0 m-0 bg-light">
+    <div class="container work-process  pb-5 pt-5">
+        <div class="title mb-5 text-center">
+        <h1 class="text-info fw-bold display-2">How We Work</h1>
+    </div>
+        <!-- ============ step 1 =========== -->
+        <div class="row">
+            <div class="col-md-5">
+                <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="process-step">
+                                <p class="m-0 p-0 text-white">Step</p>
+                                <h2 class="m-0 p-0 text-white">01</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="text-primary fw-bold mx-4">SOURCING</h5>
+                            <p><small>Malindi, Kenya is near a coastal garbage gyration that is one of the largest off the African coast. It has a long-standing infrastructure as a fishing port.  This makes it the perfect location for collecting marine refuse that can be recycled. <br>
+                                In 2020, we identified the opportunity of collecting for fishermen, and as the economy rebounds expanding to sourcing plastic caught every day in their fishing nets off Malindi.  We purchase today from out of work fisherman, which both keeps plastic out of the ocean, and helps to grow the local economy. </small></p>
+                        </div>
+                    </div>
+                    <div class="process-line-l"></div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="process-point-right"></div>
+            </div>
+        </div>
+        <!-- ============ step 2 =========== -->
+        <div class="row">
+            
+            <div class="col-md-5">
+                <div class="process-point-left"></div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="process-box process-right" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="process-step">
+                                <p class="m-0 p-0 text-white">Step</p>
+                                <h2 class="m-0 p-0 text-white">02</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="text-primary fw-bold mx-4">PRODUCTION</h5>
+                            <p><small>Sargasso produces reclaimed ocean plastic flakes by washing and shredding the bottles we purchase from local fishermen.. </small></p>
+                        </div>
+                    </div>
+                    <div class="process-line-r"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ============ step 3 =========== -->
+        <div class="row">
+            <div class="col-md-5">
+                <div class="process-box process-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="process-step">
+                                <p class="m-0 p-0 text-white">Step</p>
+                                <h2 class="m-0 p-0 text-white">03</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <h5 class="text-primary fw-bold mx-4">GOING TO MARKET</h5>
+                            <p><small>We have the flexibility to sell recycled plastic flakes to local and international clients, thanks to the nearby larger harbor at Mombasa, Kenya.  Please contact us for further information. </small></p>
+                        </div>
+                    </div>
+                    <div class="process-line-l"></div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div class="process-point-right"></div>
+            </div>
+        </div>
+       
+    </div>
+</section>
+	<script>
+  AOS.init();
+</script>
+{% endblock%}

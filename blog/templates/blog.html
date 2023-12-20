@@ -1,0 +1,130 @@
+{% extends 'base_blog.html' %} 
+{% block content%}
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-0 mb-0 wow fadeIn" data-wow-delay="0.1s">
+	<div class="container text-center py-4">
+		<h1  class="mb-4  fs-1 fw-bold text-white text-left"><span class="mb-4 fw-semi-bold">Sargasso Blog & News </span> </h1>
+	
+	</div>
+</div>
+<!-- Page Header End -->
+<!-- ======= Hero Slider Section ======= -->
+
+    <section id="hero-slider" class="hero-slider">
+      <div class="container-md pt-0 mt-0" data-aos="fade-in">
+        <div class="row">
+          
+          <div class="col-12">
+            <div class="container text-center py-0">
+              <h4  class="mb-0 fs-4 fw-light  text-start"><span class="mb-0 fw-semi-bold">Upcoming Events </span> </h4>
+            </div>
+            <div class="swiper sliderFeaturedPosts">
+              <div class="swiper-wrapper">
+              
+                <div class="swiper-slide">
+                  
+                {% if events%}
+                {% for events in events  %}
+                  <a href="{% url 'blog:post_detail' events.slug %}" class="img-bg d-flex align-items-end" style="background-image: url('{{ events.thumbnail.url }}');">
+                    <div class="img-bg-inner">
+                      <h2 class='text-warning fw-semi-bold'>{{ events.title }}</h2>
+                      <p class='text-warning fw-semi-bold'>{{ events.content }}</p>
+                    </div>
+                  </a>
+                </div>
+
+                {% endfor%}
+                         {% else %}
+                        <p>No Events Available</p>
+                        {% endif%}
+
+                
+              </div>
+              <div class="custom-swiper-button-next">
+                <span class="bi-chevron-right"></span>
+              </div>
+              <div class="custom-swiper-button-prev">
+                <span class="bi-chevron-left"></span>
+              </div>
+
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero Slider Section -->
+
+    <!-- ======= Post Grid Section ======= -->
+    <section id="posts" class="posts">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="container text-center py-0">
+            <h4  class="mb-0 fs-4  text-center "><span class="mb-0 fw-semi-bold">News And Updates </span> </h4>
+          </div>
+            {% if latest1%}
+            {% for latest1 in latest1  %}
+          <div class="col-lg-4">
+            <div class="post-entry-1 lg">
+              <a href="{% url 'blog:post_detail' latest1.slug %}"><img src="{{ latest1.thumbnail.url }}" alt="" class="img-fluid" height="120px" width="450px"></a>
+              <div class="post-meta"><span class="date">{{ latest1.category }}</span> <span class="mx-1">&bullet;</span> <span>{{ latest1.timestamp | date:"d M Y"}}</span></div>
+              <h4 class="fw-semi-bold text-black mb-1"><a href="{% url 'blog:post_detail' latest1.slug %}">{{ latest1.title|upper }}</a></h4>
+              <p class="mb-4 d-block">. {{ latest1.content | truncatechars:110 }}</p>
+
+              <div class="d-flex align-items-center author">
+                <div class="photo"><img src="assets/img/person-1.jpg" alt="" class="img-fluid"></div>
+                <div class="name">
+                  <h3 class="m-0 p-0">{{ latest1.author }}</h3>
+                </div>
+              </div>
+            </div>
+            {% endfor%}
+                         {% else %}
+                        <p>No News  Available</p>
+                        {% endif%}
+          </div>
+
+          <div class="col-lg-8">
+            <div class="row g-1">
+                {% if posts%}
+            {% for posts in page_obj  %}
+                <div class="col-lg-4 g-1">
+                  <a href="{% url 'blog:post_detail' posts.slug %}"><img src="{{ posts.thumbnail.url }}" alt="" class="img-rounded" height="170px" width="270px"></a>
+                  <div class="post-meta mt-2"><span class="date">{{ posts.category }}</span> <span class="mx-1">&bullet;</span> <span>{{ posts.timestamp | date:"d M Y"}}</span></div>
+                  <h6 class="fw-fw-semi-bold text-dark"><a href="{% url 'blog:post_detail' posts.slug %}">{{ posts.title|upper  }}</a></h6>
+                </div>
+                {% endfor%}
+                         {% else %}
+                        <p>No News  Available</p>
+                        {% endif%}
+
+              
+          </div>
+       
+         
+        </div>
+       <!-- End .row -->
+       <ul class="pagination mx-auto justify-content-center">
+        {% if page_obj.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            {% endif %}
+        {% for i in page_obj.paginator.page_range %}
+              {% if page_obj.number == i %}
+              <li class="page-item"><a class="page-link" href="#">{{ i }}</a></li>
+              {% else %}
+              
+              <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+              {% endif %}
+            {% endfor %}
+         {% if page_obj.has_next %}
+         <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+          {% else %}
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          {% endif %}
+          
+      </ul>
+    </section> <!-- End Post Grid Section -->
+
+
+    {% endblock%}

@@ -1,0 +1,64 @@
+{% extends 'base_blog.html' %} 
+{% block content%}
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-2 mb-0 wow fadeIn" data-wow-delay="0.1s">
+	<div class="container text-center py-4">
+		<h1  class="mb-4  fs-1 fw-bold text-white text-left"><span class="mb-4 fw-semi-bold">Sargasso Blog & News </span> </h1>
+	
+	</div>
+</div>
+<!-- Page Header End -->
+        <div class="container-fluid">
+            
+            <div class="row align-items-start">
+                <div class="col-sm-11 offset-1 ">
+                    <div class="row">
+                        <h4 class="fw-semi-bold fs-1 mt-4 mb-4 text-black text-center">Recent from blog</h4>
+                        {% if posts%}
+                        {% for posts in page_obj  %}
+                        <div class="col-sm-4" >
+                            <div class="blog-grid">
+                                <div class="blog-img">
+                                    <div class="date">
+                                        <span>{{ posts.timestamp | date:"d"}}</span>
+                                        <label class="text-center">{{ posts.timestamp | date:"M" }}</label>
+                                    </div>
+                                    <a href="#">
+                                        <img src="{{ posts.thumbnail.url }}" title="ocean_plastics" alt="" height="120px" width="350px">
+                                    </a>
+                                </div>
+                                <div class="blog-info">
+                                    <h5 class="text-capitalize"><a href="{% url 'blog:post_detail' posts.slug %}" class="text-capitalize">{{ posts.title }}</a></h5>
+                              <p>{{ posts.content | truncatechars:110 }}</p>
+                                    <div class="d-flex text-small mt-4">
+                                        <span class="text-muted fw-semi-bold fs-6">{{ posts.timestamp | date:"d,M Y" }}</span>
+                                        <span class="text-muted fw-semi-bold fs-6 mx-2">.3 Min Read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        {% endfor%}
+                         {% else %}
+                        <p>No News  Available</p>
+                        {% endif%}
+                    </div>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
+                </div>
+          
+               
+
+               
+
+              
+         
+            </div>
+        </div>
+
+    {% endblock%}

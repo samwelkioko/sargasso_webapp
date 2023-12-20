@@ -1,0 +1,105 @@
+{% extends 'base.html' %} 
+{% block title %}Donate | Let's Achieve Change Together Through The Gift Of Giving  {% endblock %}
+{% load static %}
+{% block content%}
+
+  <!-- Page Header Start -->
+  <div class="container-fluid mb-4" style="background-image: url({% static 'img/bg.webp'%});background-color: #cccccc;height: 500px;background-position: center;background-repeat: no-repeat;background-size: cover; ">
+
+                <hr class="bg-dark mb-4 mt-0 mx-auto" style="width: 100px; height:3px;align:center;color:black;">
+                    <div class="row g-2 align-items-center">
+                        <div class="col-md-6 d-none d-md-block">
+                                    <div class="donate-header text-center">
+                                   
+                                     <h3  class="title1 fw-bold">Join Our Movement</h3>
+                                     <hr class="bg-white mx-auto" style="width: 100px; height:10px;align:center;color:#FFFEFE;">
+                                      <h4  class="titles ">Let's achieve change together through the gift of giving.</h4>
+                                      
+                                
+
+                                    </div>
+                                    
+                                
+                              </div>
+                              <div class="col-md-5">
+                                  <div class="donate-card">
+                                    <div class="card">
+                                    <div class="card-body">
+                                    <h2 class="fw-bold knoAwz text-center mt-2 pt-2">DONATE</h2>
+                <hr class="bg-dark m-1  mx-auto" style="width: 100px; height:3px;align:center;color:black;">
+                                    <div class="text-center p-4">
+                                    
+                                    <p>Your donation will be made to Sargasso Generation Youth Initiative, a registered NGO organisation in Kenya.</p>
+                                    
+                                    </div>
+                                    <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                    <input type="hidden" name="hosted_button_id"  value="YGGVMJXYA6KC8" />
+                                    <button class="btn btn-sm donate-form" src="" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" >DONATE</button>
+                                    <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+                                    </form>
+                                    <div class="float-center mx-4">
+                                        <img src="{% static 'img/donation-form-payment-logos.png'%}"  class="paypal-img" loading = "lazy"  alt="sargasso-payment-platform">
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                    </div>
+                                    </div>
+                              </div>
+                    </div>
+                </div>
+                      
+            
+    <div class="container-fluid">
+        
+        <div class="container mb-2 bg-white" >
+      <h4 class="knoAwz text-center mt-4 mb-4 p-2">Ocean Bound Plastic Collection</h4>
+      <div class="row ">
+        <div class="col-md-4">
+          <div class="p-4">
+            <img src="{% static 'img/plastic-image-loading.webp'%}" alt="plastic-collection-community" height="200px" width="" class="card-img-top">
+          </div>
+        </div>
+        <div class="col-md-8">
+            <p class="p-4">Our operations are currently directly addressing 1/30000 of the global plastic crisis with an extraction of 12,678 kgs - 12.7 tonnes since January. We will continue to save aquatic life from suffocating every year 
+                        for decades to come and with your support we can expand substantially in the future.</p>
+        </div>
+      </div>
+      </div>
+      
+      <div class="container mb-2 bg-white" >
+      <h4 class="knoAwz text-center mt-4 mb-4 p-2"> 3D Printing</h4>
+      <div class="row ">
+        <div class="col-md-8">
+          <p class="p-4">We utilize 3D printing technology to transform some of our collected plastic bottles into different 
+                        shapes such as beads, which are then transformed into unique designs in collaboration with local artists.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="p-4">
+            <img src="{% static 'img/3d.webp'%}" alt="3d-printer-beads" height="200px" width="" class="card-img-top">
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class="container mb-2  bg-white" >
+      <h4 class="knoAwz text-center  mt-4 mb-4 p-2">Team Growth</h4>
+      <div class="row ">
+        <div class="col-md-4">
+          <div class="p-4">
+            <img src="{% static 'img/team.webp'%}"  alt="sargasso-reclamation-team" height="200px" width="" class="card-img-top">
+          </div>
+        </div>
+        <div class="col-md-8">
+            <p class="p-4">Sales proceeds and donations are reinvested into building our environmental footprint, onboarding capacity and developing our technique for wider use across Africa. We hope you will join us on our journey.</p>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+<!-- End Contact Section -->
+
+
+
+{% endblock%}

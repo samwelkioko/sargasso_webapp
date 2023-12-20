@@ -1,0 +1,110 @@
+{% extends 'base.html' %} 
+{% block title %}Our Impact Social and Economic Impact | Jobs Opportunities, Environment Cleanup and Community Empowerment{% endblock %}
+{% load static %}
+{% block content%}
+
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-headerr py-0 mb-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+      <h1  class="text-center knoAwz mt-4 fw-bold"><span>OUR PRODUCT IMPACT</span></h1>
+     
+    </div>
+  </div>
+<!-- Features Start -->
+    <div class="container">
+        <div class="row mx-0 wow fadeInUp" data-wow-delay="0.1s">
+       
+                <p class="mt-4  fw-5 justify-content-left">
+                  Many people have argued that a market driven solution to the plastic crisis, such as the one Sargasso Reclamation employees, 
+                  will be the most effective way of addressing the problem in the long run. As long as there is demand for solving the plastic 
+                  crisis on global markets, we will be able to manage our local stake of the global crisis in an independently profitable way.
+                   So we can operate and in fact grow our footprint and our impact without relying on continued charitable donations or 
+                   continued subsidies to maintain our impact. <br>
+                   Further, the ‘ocean-bound plastic’ marketing approach insures that we will not 
+                   have a reliance on global commodity prices fund us only if we are globally at the competitive edge on the market. 
+                   Within this model we can run our regenerative operation, and innovate further solutions to cleaning the oceans as long as there is global awareness for the crisis.
+                </p>
+            
+        
+        </div>
+    </div> 
+
+<div class="container ">
+    <div class="row">
+        <div class="container-xxl mt-0">
+                <div class="text-left">
+                <h6  class="mb-1 mt-4  fs-5 fw-bold titl1 text-left text-decoration-overline "><span class="fw-semi-bold">Positive environmental impact </span>  </h6>
+                </div>
+                <p class="mb-0  fw-5 justify-content-center">
+                  By extracting 7 tons of plastic a week, or 28 a month, our operation is currently directly addressing 1/30000 of the global plastic crisis with our current operation.
+                   Even though it is a small stake of the global problem, one year of our operation removes enough plastic to save 150 animals from 
+                   suffocating every year for decades to come. And with your support we plan to expand substantially in the future.<br> As the plastic 
+                   breaks down it becomes more toxic micro plastics, so our operation in 2022 will have more impact in 2040 than it does in 2025. 
+                   Our ecosystem in east Africa also supports some of the largest mega fauna in the world, such as whale sharks, red fin tuna,
+                    kingfish and large species of turtles and swordfish. As apex predators that feed on squid, many of these species are highly 
+                    susceptible to dying by ingesting plastic.
+                   
+                </p>
+                <span >
+                    <div class="mt-4  mb-4">
+                        <canvas id="myChart"></canvas>
+                      </div>
+                      
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      
+                      <script>
+                        const ctx = document.getElementById('myChart');
+                      
+                        new Chart(ctx, {
+                          type: 'bar',
+                          data: {
+                            labels: ['January', 'february', 'March','April','May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                            datasets: [{
+                              label: 'Total Recycled Plastics In Ton(s)',
+                              data: [12, 19, 3, 5, 2, 3,12, 19, 3, 5, 2, 3],
+                              borderWidth: 1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                      </script>
+                </span>
+                <div class="text-left">
+                    <h6  class="mb-1 mt-4  fs-5 fw-bold titl1 text-left text-decoration-overline "></i><span class="fw-semi-bold">Reduced landfill</span> </h6>
+                    </div>
+                    <p class="mb-0  fw-5 justify-content-center">
+                        
+                      Africa is on track to witness the highest population growth, as well as one of the highest GDP per capita growth rates in the world in the coming decades. This will lead to a crisis level of plastic use, plastic waste and plastic mismanagement across the continent. 
+                      While properly disposed waste is considered to no longer contribute to the problem in many markets,
+                       the peculiarities of Africa make this less of a secure solution. A recycling and reuse strategy for mismanaged waste takes pressure off overstretched landfill infrastructure than is in danger of overflowing onto beaches and waterways in costal African communities.
+                       
+                    </p>
+                    <div class="text-left">
+                        <h6  class="mb-1 mt-4  fs-5 fw-bold titl1 text-left text-decoration-overline "></i><span class="fw-semi-bold">Job Creations</span> </h6>
+                        </div>
+                        <p class="mb-0  fw-5 justify-content-center">
+                          Recycling is a labour intensive industrial process that requires a great deal of involvement of disadvantaged pickers and industrial workers. At Sargasso our premium Ocean Plastic certified products allow us healthier financials which we are proud to translate into a better deal for our employees and informal workers. Sargasso creates a substantial number of good jobs for disadvantaged and working class local communities.
+                           
+                        </p>
+                        <div class="text-left ">
+                            <h6  class="mb-1 mt-4  fs-5 fw-bold titl1 text-left text-decoration-overline"><span class="fw-semi-bold">Economic and social transformation</span> </h6>
+                            </div>
+                            <p class="mb-5  fw-5 justify-content-center">
+                              In our role as a major employer and source of funding for local communities, we are able to link with community groups and self-help organisations, empowering the environmental instincts of local communities and 
+                              offering them leverage against exploitative actors within the recycling space.<br> This allows more funding to be brought to bear in environmental regeneration, as well as strengthening the political and economic position of the demographics most interested in healthy local ecosystems. In our position we are able to cut through a layer of price competitive recycling wholesalers who stand between international institutions and local communities, siphoning money from directly regenerative activities.
+                               
+                            </p>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock%}

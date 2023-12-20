@@ -1,0 +1,219 @@
+{% extends 'base.html' %} 
+{% block title %} 3D Printing- At Sargasso we believe3D printing revolutionizes manufacturing by creating three-dimensional objects layer by layer. It enables rapid prototyping, customization, and intricate designs with various materials. This technology finds applications in industries like aerospace, healthcare, and automotive, fostering innovation and reducing production costs. 3D printing has the potential to transform industries and accelerate product development.
+{% endblock %}
+
+{% load static %}
+{% block content%}
+<style>
+    .carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(42, 157, 143, 0.1);
+    z-index: 1;
+    position: absolute;
+    margin-top: -200px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    height:auto;
+}
+
+</style>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/3d.webp'%}" class="d-block" style="height:600px;width:100%;" alt="image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <h1 class="display-3 text-white mt-3 mb-0 animated slideInDown fw-bold">Revolutionizing industries, creating possibilities: The future lies in 3D printing.</h1>
+                            
+                                </div>
+                            </div>
+                        </div>
+              </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/PRINT.webp'%}" class="d-block" style="height:600px;width:100%;" alt="image">
+                      <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <h1 class="display-3 text-white mt-3 mb-0 animated slideInDown fw-bold"><br/><br/>Revolutionizing industries, creating possibilities: The future lies in 3D printing.</h1>
+                            
+                                </div>
+                            </div>
+                        </div>
+              </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://source.unsplash.com/collection/190726/3000x900" class="d-block w-100" alt="image">
+                      <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-12">
+                                    <h1 class="display-3 text-white mt-3 mb-0 animated slideInDown fw-bold"><br/><br/>Revolutionizing industries, creating possibilities: The future lies in 3D printing.</h1>
+                            
+                                </div>
+                            </div>
+                        </div>
+              </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+  <!-- Page Header End -->
+  <div class="container pb-5 pt-5">
+        <h1  class="mb-4 fs-1 text-dark text-left text-decoration-overline"><span class=" ">Application area for</span> <span class="fw-semi-bold">3D Services</span></h1>
+            <div class="row g-4">
+            
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-plane text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl" >Aerospace</h4>
+                            <p class="mb-0">
+                             Used for lightweight and complex aerospace components, reducing fuel consumption</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-cogs text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl">Automotive</h4>
+                            <p class="mb-0">
+                            3D printing aids in producing customized parts, optimizing vehicle design, and rapid tooling
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class=" fa fa-home text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold">Architecture</h4>
+                            <p class="mb-0">
+                                Architects use 3D printing for detailed models and intricate designs
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                 <div class="row g-4 mt-2 pt-2">
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded d-flex ">
+                      
+                        <div class="service-text rounded py-5 px-2">
+                        <i class="fa fa-american-sign-language-interpreting  text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3  fw-bold  headerstl">Rapid Prototyping:</h4>
+                            <p class="mb-4">3D printing enables quick and cost-effective creation of prototypes for product design and development.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-industry text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl">Manufacturing</h4>
+                            <p class="mb-0">
+                                3D printing is used for producing end-use parts and components across various industries.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                         <i class="fa fa-medkit  text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl ">Medical Modelling</h4>
+                            <p class="mb-4"> It helps in creating precise 3D models of organs for surgical planning and medical training.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="row g-4">
+            
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-graduation-cap  text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl" >Education</h4>
+                            <p class="mb-0">
+                             3D printing enhances learning by creating interactive and tangible educational aids.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-paint-brush text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold headerstl">Art and Jewelry</h4>
+                            <p class="mb-0">
+                            Artists and jewelers utilize 3D printing to craft intricate and unique designs.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded d-flex ">
+                       
+                        <div class="service-text rounded py-5 px-2">
+                            <i class="fa fa-female text-info mb-2 fa-3x"></i>
+                            <h4 class="mb-3 fw-bold">Fashion</h4>
+                            <p class="mb-0">
+                                3D Printing enables custom-fit clothing, accessories, and experimental fashion pieces.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                
+        
+ </div>
+
+{% endblock%}

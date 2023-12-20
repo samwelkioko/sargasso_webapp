@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+{% block title %}Sargasso Team - sargaso reclamation has a wide team comprising of diffrent proffesional specializing with diffrent areas {% endblock %}
+{% load static %}
+{% block content%}
+
+         <!-- Page Header Start -->
+  <div class="container-fluid   pt-4 mt-4">
+    <div class="container">
+      <h1  class=" mb-1 mt-1  fs-1 text-black fw-bold text-decoration-overline text-center"><span class="mb-4 fw-bold titl1">Our Team</span></h1>
+     
+    </div>
+  </div>
+<div class="py-5 team4">
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-7 text-center">
+        <h3 class="mb-2 knoAwz"> Our Experienced & Professional Team</h3>
+       
+      </div>
+    </div>
+    <div class="row">
+      <!-- column  -->
+       {% for employee in employee %}
+      <div class="col-lg-3 mb-4">
+        <!-- Row -->
+        
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="{{employee.img.url}}" alt="wrapkit" class="img rounded-circle" height="200px" width="200px" />
+          </div>
+          <div class="col-md-12 text-center">
+            <div class="pt-2">
+              <h5 class="mt-4 font-weight-medium mb-0">{{ employee.name}}</h5>
+              <h6 class="subtitle mb-3">{{ employee.position}}</h6>
+            <span class="team-social d-flex mx-4 px-4">
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.facebook}}"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square rounded-circle text-info me-2" href="{{ employee.linkedin}}"><i class="fab fa-linkedin"></i></a>
+                        </span>
+            </div>
+          </div>
+        </div>
+        <!-- Row -->
+      </div>
+      {%endfor %}
+      <!-- column  -->
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock%}
